@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements IProgressEvent, I
         this.txtURL.setText("https://firebasestorage.googleapis.com/v0/b/ead-technology.appspot.com/o/security.jpg?alt=media&token=73811049-7829-4f69-8899-9a90f34e7230");
 
         this.txtDestFileName = (EditText)findViewById(R.id.txtDestFileName);
-        this.txtDestFileName.setText("security.jpg");
+        this.txtDestFileName.setText("file.jpg");
 
         this.btnShow = (Button)findViewById(R.id.btnShow);
         btnShow.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements IProgressEvent, I
 
                 File file = DownloadHelper.CreateFile(txtDestFileName.getText().toString());
                 if (file == null){  
-                    Toast.makeText(MainActivity.this, "Pasta demos nao localizada em Picutres", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Nao foi possivel criar o arquivo", Toast.LENGTH_LONG).show();
                 } else {
                     String dest = file.getAbsolutePath();
                     downloadTask = DownloadHelper.downloadAssync(MainActivity.this, txtURL.getText().toString(), dest);
