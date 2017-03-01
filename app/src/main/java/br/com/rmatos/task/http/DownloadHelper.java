@@ -19,18 +19,7 @@ import java.net.URL;
 public class DownloadHelper {
 
 
-    public static File CreteFile(String fileName) {
-        File dir = Environment.getDataDirectory();
-        File file = new File(dir, fileName);
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            file = null;
-        }
-        return file;
-    }
-
-    public static File CreteSdCardFile(String fileName) {
+    public static File CreateFile(String fileName) {
         File dir = Environment.getExternalStorageDirectory();
         File file = new File(dir, fileName);
         try {

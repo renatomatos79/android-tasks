@@ -70,10 +70,6 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
                     input.close();
                     return null;
                 }
-                // total += count;
-                // publishing the progress....
-                // if (fileLength > 0) // only if total length is known
-                //     publishProgress((int) (total * 100 / fileLength));
                 output.write(buffer, 0, count);
             }
         }

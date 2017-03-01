@@ -15,9 +15,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:text="Image URL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/txtURL"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Salvar como"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/txtDestFileName"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/btnShow"
-            android:text="Show Progress Dialog"
+            android:text="Download"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
